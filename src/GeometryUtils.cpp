@@ -5,6 +5,10 @@ bool is_almost_equal(double a, double b, double scale) {
     return abs(a - b) < scale;
 }
 
+// 定义一个用于判断三个 double 是否近似相等的函数
+bool are_almost_equal(double a, double b, double c, double scale) {
+    return is_almost_equal(a, b) && is_almost_equal(b, c);
+}
 
 // 冒泡排序函数：对 ys 数组排序，并同步更新 indices 数组
 void bubble_sort_with_indices(double *arr, int *indices, int size) {

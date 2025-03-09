@@ -8,6 +8,9 @@
 // 用于判断两个 double 是否近似相等
 bool is_almost_equal(double a, double b, double scale = 1e-9);
 
+// 用于判断三个 double 是否近似相等
+bool are_almost_equal(double a, double b, double c, double scale = 1e-9);
+
 // 冒泡排序函数：对 ys 数组排序，并同步更新 indices 数组
 void bubble_sort_with_indices(double *arr, int *indices, int size);
 
