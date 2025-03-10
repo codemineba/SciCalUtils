@@ -10,6 +10,19 @@ bool are_almost_equal(double a, double b, double c, double scale) {
     return is_almost_equal(a, b) && is_almost_equal(b, c);
 }
 
+// 定义一个用于判断两个 double* 是否近似相等的函数
+bool is_almost_equal(double* a, double* b, int dim, double scale){
+    // 遍历数组中的每个元素
+    for (int i = 0; i < dim; ++i) {
+        // 判断对应位置的元素是否近似相等
+        if (!is_almost_equal(a[i], b[i], scale)) { 
+            return false;
+        }
+    }
+    // 如果所有元素都近似相等，则返回 true
+    return true;
+}
+
 // 冒泡排序函数：对 ys 数组排序，并同步更新 indices 数组
 void bubble_sort_with_indices(double *arr, int *indices, int size) {
     for (int i = 0; i < size - 1; ++i) {
