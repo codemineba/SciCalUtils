@@ -2,7 +2,7 @@
 
 // 定义一个用于判断两个 double 是否近似相等的函数
 bool is_almost_equal(double a, double b, double scale) {
-    return abs(a - b) < scale;
+    return fabs(a - b) < scale;
 }
 
 // 定义一个用于判断三个 double 是否近似相等的函数
